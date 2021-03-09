@@ -21,6 +21,7 @@ export class App extends Component {
   addUrl = url => {
     postUrl(url)
       .then(newUrl => this.setState({ urls: [...this.state.urls, newUrl] }))
+      .catch(error => console.log(`We're having a problem: ${error}`))
   }
 
 
