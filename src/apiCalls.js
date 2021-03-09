@@ -11,4 +11,5 @@ export const postUrl = url => {
        },
       body: JSON.stringify(url)
   })
+    .then(response => response.json())
 }

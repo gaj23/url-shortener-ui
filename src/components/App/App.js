@@ -20,8 +20,7 @@ export class App extends Component {
 
   addUrl = url => {
     postUrl(url)
-    this.setState({ urls: [...this.state.urls, url] })
-    console.log(url)
+      .then(newUrl => this.setState({ urls: [...this.state.urls, newUrl] }))
   }
 
 

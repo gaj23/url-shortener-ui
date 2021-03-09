@@ -5,8 +5,8 @@ class UrlForm extends Component {
     super();
     this.props = props;
     this.state = {
-      title: '',
-      long_url: ''
+      long_url: '',
+      title: ''
     };
   }
 
@@ -20,11 +20,12 @@ class UrlForm extends Component {
       ...this.state
     }
     this.props.addUrl(newUrl);
+    
     this.clearInputs();
   }
 
   clearInputs = () => {
-    this.setState({title: '', long_url: ''});
+    this.setState({long_url: '', title: ''});
   }
 
   render() {
